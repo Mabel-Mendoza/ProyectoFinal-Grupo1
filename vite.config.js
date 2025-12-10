@@ -3,6 +3,7 @@ import path from "node:path";
 import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
+  base: "/ProyectoFinal-Grupo1/",
   appType: "mpa", // multipage app
   plugins: [
     handlebars({

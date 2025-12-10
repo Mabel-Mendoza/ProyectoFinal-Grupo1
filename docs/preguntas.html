@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" crossorigin href="/ProyectoFinal-Grupo1/assets/style-DEHOPi0p.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="nav container">
+
+    <a href="index.html" class="nav__logo">香 港 Hong Kong</a>
+
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acercadenosotros.html">Acerca de Nosotros</a></li>
+
+      <!-- 🔥 MENÚ DESPLEGABLE -->
+      <li class="menudesplegable">
+        <a href="#" class="menudesplegable__btn">Menú ▾</a>
+
+        <ul class="menudesplegable__menu">
+          <li><a href="entradas.html">Entradas</a></li>
+          <li><a href="arroz.html">Arroz HK</a></li>
+          <li><a href="mariscos.html">Mariscos</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="bebidas.html">Bebidas</a></li>
+        </ul>
+      </li>
+
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contactanos.html">Contáctanos</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+    <!-- HERO FAQ -->
+    <section class="faq-hero">
+        <div class="faq-hero__content container">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Resolvemos las dudas más comunes sobre nuestro restaurante, reservas, pedidos y más. ¡Tu experiencia es importante para nosotros!</p>
+            <a href="contactanos.html" class="btn-primary">Contáctanos</a>
+        </div>
+        <div class="faq-hero__img">
+            <img src="/ProyectoFinal-Grupo1/assets/sede1-CYBCYOaj.jpg" alt="Preguntas frecuentes">
+        </div>
+    </section>
+    
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+    <section class="faq-section container">
+        <h2>¿Cómo podemos ayudarte?</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Se puede reservar mesa con anticipación?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, puedes reservar con anticipación llamando a nuestro número de contacto o a través de nuestro formulario en línea.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Ofrecen opciones vegetarianas o veganas?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>¡Claro! Contamos con varios platillos vegetarianos y algunas opciones veganas. Consulta nuestro menú para más detalles.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Realizan entregas a domicilio?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, hacemos entregas a domicilio dentro de la ciudad. Puedes hacer tu pedido por teléfono o desde nuestra app.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Aceptan pagos con tarjeta?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Aceptamos pagos con tarjeta de crédito y débito, así como pagos en efectivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- JS para acordeón -->
+    <script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+    
+            const answer = item.nextElementSibling;
+            if(parent.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+    
+            // Cambiar el símbolo + / -
+            const toggle = item.querySelector('.faq-toggle');
+            toggle.textContent = parent.classList.contains('active') ? '-' : '+';
+        });
+    });
+    </script>
+</main>
+    <footer class="footer">
+        <div class="footer__container container">
+    
+            <div class="footer__brand">
+                <h2 class="footer__logo">香 港 Hong Kong</h2>
+                <p class="footer__desc">Sabores auténticos de la cocina china tradicional.</p>
+            </div>
+    
+            <div class="footer__links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                    <li><a href="galeria.html">Galeria de fotos</a></li>
+                    <li><a href="reserva.html">Reserva tu mesa</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__info">
+                <h3>Información</h3>
+                <p>Calle panamericana, frente a Proveedor Industrial Tocoa Colon.</p>
+                <p>+504 9590-7829</p>
+                <p>Lunes a Domingo: 07:00am – 09:00pm</p>
+            </div>
+    
+        </div>
+    
+        <div class="footer__bottom">
+            <p>© 2025 Restaurante Hong Kong — Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
