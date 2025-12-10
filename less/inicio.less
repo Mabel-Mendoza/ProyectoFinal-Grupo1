@@ -1,0 +1,191 @@
+
+@primary: #C02525;
+@dark: #111;
+@light: #f8f8f8;
+@muted: #f5f5f5;
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.home-hero {
+  background: url("../img/home-hero.jpeg") center/cover no-repeat;
+  padding: 100px 0;
+  position: relative;
+  color: white;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+  }
+
+  .home-hero__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .home-hero__text {
+    flex: 1 1 60%;
+    h1 {
+      font-family: "chineslogo";
+      font-size: 3.2rem;
+      margin: 0 0 12px 0;
+      line-height: 1.05;
+      text-shadow: 1px 2px 8px rgba(0,0,0,0.6);
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: @primary;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  .home-hero__image {
+    flex: 0 0 360px;
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+.home-features {
+  padding: 60px 0;
+  background: @light;
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .feature {
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    h4 { font-family: "chinesstyle"; color: @primary; margin-bottom: 8px; font-size: 1.9rem; }
+    p { color: #333; line-height: 1.5; font-size: 0.95rem; }
+    .icon {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: @primary;
+    }
+  }
+}
+
+.home-menu {
+  padding: 60px 0;
+
+  .menu-title {
+    text-align: center;
+    font-family: "chinesstyle";
+    color: @primary;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .menu-card {
+    background: @dark;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+    border: 1px solid darken(@dark, 6%);
+
+    &:hover { transform: translateY(-6px); border-color: @primary; }
+
+    &__img {
+      height: 180px;
+      overflow: hidden;
+      img { width: 100%; height: 100%; object-fit: cover; display:block; transition: transform 0.3s ease; }
+    }
+
+    &__body {
+      padding: 16px;
+      h5 { margin: 0 0 6px 0; color: #fff; }
+      .price { color: @primary; font-weight: 700; }
+      p { margin: 8px 0 0 0; color: #ddd; font-size: 0.95rem; }
+    }
+  }
+}
+
+.home-cta {
+  background: linear-gradient(90deg, darken(@primary,6%), @primary);
+  color: white;
+  padding: 40px 0;
+  margin-top: 30px;
+  border-radius: 8px;
+
+  .cta-inner {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .cta-text {font-size: 1.1rem; font-weight: 600; }
+  .cta-btn {
+    background: white;
+    color: @primary;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero .home-hero__content { flex-direction: column; text-align: center; }
+  .home-hero .home-hero__image { flex: 0 0 80%; max-width: 420px; }
+
+  .home-features .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-menu .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-cta .cta-inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .home-features .features-grid { grid-template-columns: 1fr; }
+  .home-menu .menu-grid { grid-template-columns: 1fr; }
+  .home-hero { padding: 60px 0; }
+  .home-hero h1 { font-size: 2rem; }
+}

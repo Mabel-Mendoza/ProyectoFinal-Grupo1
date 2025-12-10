@@ -1,0 +1,183 @@
+/* -------------------------
+    HERO de Galería con imagen
+-------------------------- */
+.galeria-hero {
+    background: url("../img/hero.jpg") center/cover no-repeat; 
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35); 
+        backdrop-filter: blur(2px);
+    }
+
+    &__title,
+    &__subtitle {
+        position: relative; /* para estar arriba del overlay */
+        z-index: 2;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-family: "chineslogo";
+        color: #ffffff; /* blanco para contraste */
+        font-weight: 700;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+
+    &__subtitle {
+        color: #f1f1f1;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+}
+
+
+/* -------------------------
+    Galería principal
+-------------------------- */
+.galeria-grid {
+    padding: 60px 0;
+
+    .galeria-title {
+        text-align: center;
+        font-family: "chinesstyle";
+        font-size: 2rem;
+        font-weight: 600;
+        color: #C02525;
+        margin-bottom: 40px;
+    }
+
+    .galeria-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+
+        .galeria-card {
+            background: #111; // negro estilo sección negra
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s ease;
+            border: 1px solid #222;
+
+            &:hover {
+                transform: translateY(-5px);
+                border-color: #C02525; // borde rojo al hover
+            }
+
+            &__img {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 8px;
+                margin-bottom: 15px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            h4 {
+                color: white;
+                margin-bottom: 5px;
+                font-size: 1.2rem;
+            }
+
+            p {
+                color: #C02525; // texto rojo igual que populares
+                font-weight: bold;
+                font-size: 0.95rem;
+            }
+        }
+    }
+}
+
+/* -------------------------
+    Sección de Reviews estilo TESTIMONIOS
+-------------------------- */
+.galeria-reviews {
+    background: #C02525; // igual que .aboutus-testimonials
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+
+    .reviews-title {
+        font-size: 2rem;
+        font-family: "chinesstyle";
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .reviews-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+    }
+
+    .reviews-circles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 25px;
+        justify-items: center;
+
+        .review-circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+                border: 3px solid white; // armonizado con testimonios
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            span {
+                color: white;
+                font-size: 0.95rem;
+                text-align: center;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+/* -------------------------
+    Responsivo
+-------------------------- */
+@media (max-width: 900px) {
+    .galeria-items {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-items {
+        grid-template-columns: 1fr !important;
+    }
+}
+

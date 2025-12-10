@@ -1,0 +1,75 @@
+<!-- HERO FAQ -->
+<section class="faq-hero">
+    <div class="faq-hero__content container">
+        <h1>Preguntas Frecuentes</h1>
+        <p>Resolvemos las dudas más comunes sobre nuestro restaurante, reservas, pedidos y más. ¡Tu experiencia es importante para nosotros!</p>
+        <a href="contactanos.html" class="btn-primary">Contáctanos</a>
+    </div>
+    <div class="faq-hero__img">
+        <img src="./img/sede1.jpg" alt="Preguntas frecuentes">
+    </div>
+</section>
+
+<!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+<section class="faq-section container">
+    <h2>¿Cómo podemos ayudarte?</h2>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>¿Se puede reservar mesa con anticipación?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sí, puedes reservar con anticipación llamando a nuestro número de contacto o a través de nuestro formulario en línea.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>¿Ofrecen opciones vegetarianas o veganas?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>¡Claro! Contamos con varios platillos vegetarianos y algunas opciones veganas. Consulta nuestro menú para más detalles.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>¿Realizan entregas a domicilio?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sí, hacemos entregas a domicilio dentro de la ciudad. Puedes hacer tu pedido por teléfono o desde nuestra app.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>¿Aceptan pagos con tarjeta?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Aceptamos pagos con tarjeta de crédito y débito, así como pagos en efectivo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JS para acordeón -->
+<script>
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+
+        const answer = item.nextElementSibling;
+        if(parent.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+
+        // Cambiar el símbolo + / -
+        const toggle = item.querySelector('.faq-toggle');
+        toggle.textContent = parent.classList.contains('active') ? '-' : '+';
+    });
+});
+</script>

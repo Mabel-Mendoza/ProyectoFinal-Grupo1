@@ -1,0 +1,223 @@
+
+.reserva-hero {
+    position: relative;
+    background: url("../img/hero.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: #fff;
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+        backdrop-filter: blur(2px);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: "chineslogo";
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+        }
+
+        p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/* -----------------------------------
+    SECCIÓN RESERVA
+----------------------------------- */
+.reserva-seccion {
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+/* -----------------------------------
+    CALENDARIO
+----------------------------------- */
+.reserva-calendario {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    transform: translateY(0);
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .calendario-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h3 {
+            font-family: "chinesstyle";
+            font-size: 1.3rem;
+            color: #222;
+        }
+
+        .cal-btn {
+            background: #d72828;
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+            &:hover {
+                background: darken(#d72828, 8%);
+            }
+        }
+    }
+
+    .calendario-tabla {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+
+        th {
+            padding-bottom: 12px;
+            color: #d72828;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+            &:hover {
+                background: #ffe1e1;
+            }
+
+            &.activo {
+                background: #d72828;
+                color: #fff;
+                font-weight: 600;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+                &:hover {
+                    background: lighten(#d72828, 5%);
+                }
+            }
+        }
+    }
+
+    .calendario-estado {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 0.9rem;
+        color: #333;
+
+        .cuadro {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            border-radius: 4px;
+
+            &.activo { background: #d72828; }
+            &.no { background: #999; }
+        }
+    }
+}
+
+
+/* -----------------------------------
+    FORMULARIO
+----------------------------------- */
+.reserva-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+
+    h2 {
+        font-family: "chinesstyle";
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        color: #222;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background: #d72828;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 6px;
+        }
+    }
+
+    form {
+        display: grid;
+        gap: 18px;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            label {
+                color: #444;
+                font-weight: 600;
+            }
+
+            input {
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: border-color 0.2s ease;
+
+                &:focus {
+                    border-color: #d72828;
+                }
+            }
+        }
+
+        .reserva-btn {
+            margin-top: 10px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+/* ==========================
+   FUENTES
+========================== */
+@font-face {
+    font-family: "chinesstyle";
+    src: url("../src/Hoshiko Satsuki.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "chineslogo";
+    src: url("../src/go3v2.ttf") format("truetype");
+} 
+
+/* ==========================
+   HEADER
+========================== */
+.header {
+    background: rgb(22, 22, 22);
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   NAV
+========================== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 3rem;  
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+.nav__logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: @text-nav;
+    font-family: "chineslogo", sans-serif;
+    cursor: pointer;
+    transition: transform .2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* ==========================
+   NAV LINKS
+========================== */
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__links li a {
+    color: @text-nav;
+    text-decoration: none;
+    font-family: chinesstyle;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity .2s ease;
+
+    &:hover {
+        opacity: .6;
+        color: @text-primary;
+    }
+}
+
+/* ==========================
+   MENÚ DESPLEGABLE
+========================== */
+.menudesplegable {
+    position: relative;
+
+    .menudesplegable__btn {
+        font-family: chinesstyle;
+        color: @text-nav;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .menudesplegable__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgb(22, 22, 22);
+        list-style: none;
+        padding: .8rem 1rem;
+        margin: 0;
+        border-radius: 4px;
+        display: none;
+        flex-direction: column;
+        gap: .4rem;
+        min-width: 180px;
+        box-shadow: 0 4px 10px rgba(0,0,0,.35);
+        z-index: 50;
+
+        li a {
+            font-family: chinesstyle;
+            color: @text-nav;
+            text-decoration: none;
+            font-size: .95rem;
+
+            &:hover {
+                opacity: .6;
+                color: @text-primary;
+            }
+        }
+    }
+
+    /* SHOW MENU ON HOVER */
+    &:hover .menudesplegable__menu {
+        display: flex;
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+
+    .nav {
+        padding: 0 1.5rem;
+    }
+
+    .nav__links {
+        gap: 1rem;
+    }
+
+    .nav__logo {
+        font-size: 1.8rem;
+    }
+}

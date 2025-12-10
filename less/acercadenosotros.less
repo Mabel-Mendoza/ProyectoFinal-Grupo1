@@ -1,0 +1,180 @@
+/* HERO */
+.aboutus-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background: #f8f8f8;
+
+    &__content {
+        max-width: 50%;
+
+        h1 {
+            font-size: 3rem;
+            font-family: "chineslogo";
+            color: #C02525;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #C02525;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    }
+
+    &__img img {
+        max-width: 500px;
+        border-radius: 10px;
+    }
+}
+
+/* POPULARES */
+.aboutus-popular {
+    padding: 60px 0;
+
+    h2 {
+        font-size: 2rem;
+        font-family: "chinesstyle";
+        margin-bottom: 30px;
+        color: #C02525;
+        text-align: center;
+    }
+
+    .popular-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .popular-item {
+        background: #333;
+        color: white;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 10px 0 5px;
+        }
+
+        p {
+            color: #C02525;
+            font-weight: bold;
+        }
+    }
+}
+
+/* SECCIÓN NEGRA */
+.aboutus-info {
+    background: #111;
+    color: white;
+    padding: 80px 0;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__text {
+            max-width: 50%;
+
+            h2 {
+                font-family: "chinesstyle";
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+
+            .btn-primary {
+                display: inline-block;
+                padding: 12px 22px;
+                background: @primary;
+                color: #fff;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
+
+        &__img img {
+    width: 10px;
+    height: auto;
+}
+    }
+}
+
+/* TESTIMONIOS */
+.aboutus-testimonials {
+    background: #C02525;
+    color: white;
+    padding: 60px 0;
+
+    h2 {
+        text-align: center;
+        font-family: "chinesstyle";
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        justify-items: center;
+    }
+
+    .testimonial-card {
+        background: white;
+        color: #333;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-family: "chinesstyle";
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+    }
+}
+
