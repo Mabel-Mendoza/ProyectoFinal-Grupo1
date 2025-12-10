@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos</title>
+
+  <script src="./formulario.js"></script>
+  <link rel="stylesheet" crossorigin href="/ProyectoFinal-Grupo1/assets/style-DEHOPi0p.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+  
+      <a href="index.html" class="nav__logo">香 港 Hong Kong</a>
+  
+      <ul class="nav__links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acercadenosotros.html">Acerca de Nosotros</a></li>
+  
+        <!-- 🔥 MENÚ DESPLEGABLE -->
+        <li class="menudesplegable">
+          <a href="#" class="menudesplegable__btn">Menú ▾</a>
+  
+          <ul class="menudesplegable__menu">
+            <li><a href="entradas.html">Entradas</a></li>
+            <li><a href="arroz.html">Arroz HK</a></li>
+            <li><a href="mariscos.html">Mariscos</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="bebidas.html">Bebidas</a></li>
+          </ul>
+        </li>
+  
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contactanos.html">Contáctanos</a></li>
+  
+      </ul>
+  
+    </nav>
+  </header>
+
+  <main class="contact-page">
+  <!-- Bloque principal: formulario + mapa -->
+  <section class="contact-main">
+    <!-- Columna formulario -->
+    <div class="contact-main__column contact-main__form">
+      <h1 class="titulo-seccion">Datos Personales</h1>
+  
+      <form id="frmData">
+        <label>Correo Electrónico</label>
+        <input type="email" name="txtCorreo" id="txtCorreo" placeholder="correo@electroni.co" />
+  
+        <label>Nombre Completo</label>
+        <input type="text" name="txtNom" id="txtNom" placeholder="Nombre Completo" />
+  
+        <label>Fecha de Nacimiento</label>
+        <input type="date" name="txtDate" id="txtDate" />
+  
+        <label>Agregar Nota</label>
+        <textarea id="txtNota" name="txtNota" rows="4" placeholder="Pon tu comentario aqui!..."></textarea>
+  
+        <input type="button" value="Enviar" onclick="return validar();" />
+      </form>
+    </div>
+  
+    <!-- Columna mapa -->
+    <div class="contact-main__column contact-main__map">
+      <h1 class="titulo-seccion">Nuestra Ubicación</h1>
+  
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.849922228996!2d-86.00959032535137!3d15.652978250447804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6bcbfdc7d6b4e3%3A0xb6b7483e6d9a3f15!2sRestaurante%20Hong%20Kong!5e0!3m2!1ses-419!2shn!4v1765081860954!5m2!1ses-419!2shn"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+  
+  <!-- Bloque video -->
+  <section class="video-ubicacion">
+    <div class="video-card">
+      <h1 class="titulo-seccion">¿Cómo llegar?</h1>
+  
+      <p class="direccion">
+        📍 Calle panamericana, frente a Proveedor Industrial Tocoa Colon .
+      </p>
+  
+      <video controls autoplay muted loop>
+        <source src="/ProyectoFinal-Grupo1/assets/video_ubicacion-7c3DH70c.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </section>
+
+  </main>
+  <footer class="footer">
+      <div class="footer__container container">
+  
+          <div class="footer__brand">
+              <h2 class="footer__logo">香 港 Hong Kong</h2>
+              <p class="footer__desc">Sabores auténticos de la cocina china tradicional.</p>
+          </div>
+  
+          <div class="footer__links">
+              <h3>Navegación</h3>
+              <ul>
+                  <li><a href="eventos.html">Eventos</a></li>
+                  <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                  <li><a href="galeria.html">Galeria de fotos</a></li>
+                  <li><a href="reserva.html">Reserva tu mesa</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer__info">
+              <h3>Información</h3>
+              <p>Calle panamericana, frente a Proveedor Industrial Tocoa Colon.</p>
+              <p>+504 9590-7829</p>
+              <p>Lunes a Domingo: 07:00am – 09:00pm</p>
+          </div>
+  
+      </div>
+  
+      <div class="footer__bottom">
+          <p>© 2025 Restaurante Hong Kong — Todos los derechos reservados.</p>
+      </div>
+  </footer>
+</body>
+</html>
